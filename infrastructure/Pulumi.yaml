@@ -1,0 +1,6 @@
+name: github_actions_examples
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: infrastructure to test github actions
