@@ -34,6 +34,16 @@ AWS_SECRET_ACCESS_KEY=<your_aws_secret_access_key>
 AWS_REGION=us-east-1
 ```
 
+Now go to `aws_service_role` folder and create the service role:
+
+Note: edit role name as required.
+```bash
+./create_role.sh 
+```
+
+Copy the resulting role ARN and add it to the `.env` file:
+
+
 ### 1. Create ECR Private image repository with pulumi
 
 ```bash
@@ -41,9 +51,6 @@ cd infrastructure
 export $(cat ../.env | xargs)
 pulumi new aws-python
 ```
-
-Copy the output of ROLE_ARN to the `.env` file.
-
 
 ### 2. Add secrets to the github repository
 
