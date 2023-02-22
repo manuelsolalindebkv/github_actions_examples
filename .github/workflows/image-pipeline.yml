@@ -24,9 +24,9 @@ jobs:
       # run backend tests
       - name: Run backend tests
         run: |
-        docker build --target base-backend -t sd_backend_img ./backend
-        docker build --target test-backend -t sd_backend_test_img ./backend
-        docker run sd_backend_test_img
+          docker build --target base-backend -t sd_backend_img ./backend
+          docker build --target test-backend -t sd_backend_test_img ./backend
+          docker run sd_backend_test_img
           
       - name: Configure AWS credentials
         id: aws-credentials
